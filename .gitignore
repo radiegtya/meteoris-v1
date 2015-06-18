@@ -1,0 +1,7 @@
+/nbproject/private/
+/packages/tests-proxy
+*.*~
+*.nogit
+mup.json
+settings.json
+

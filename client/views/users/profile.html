@@ -1,0 +1,64 @@
+<template name="usersProfile">
+    <div class="container">
+        <!--Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li><a href="{{pathFor 'sitesIndex'}}">{{_ "Home"}}</a></li>
+            <li><a href="{{pathFor 'usersIndex'}}">{{_ "Users"}}</a></li>
+            <li class="active">{{_ "View"}}</li>
+        </ol>
+
+        {{#with model}}
+        <div class="title">
+            <h3 class="pull-left">{{_ "User Profile"}} #{{_id}}</h3>
+        </div>
+        <div class="clearfix"></div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><b>{{_ "Email"}}</b></td>
+                    <td>{{emails.[0].address}}</td>
+                </tr>
+                <tr>
+                    <td><b>{{_ "Mugen Role Group"}}</b></td>
+                    <td>{{mugenRoleGroup.name}}</td>
+                </tr>    
+                <tr>
+                    <td><b>{{_ "Created at"}}</b></td>
+                    <td>{{meteorisFormatter "dateTime" createdAt}}</td>
+                </tr>                            
+            </tbody>
+        </table>        
+        <hr/>
+
+        <h4>Change Profile</h4>
+
+        <form id="change_profile_form">        
+            <div class="form-group">
+                <label for="name" class="control-label">{{_ "Name"}} *</label>
+                <input type="text" id="name" value="{{profile.name}}" placeholder="Name" class="form-control">
+            </div>            
+            <button id="btnChangeProfile" type="submit" class="btn btn-success">{{_ "Submit"}}</button>                
+        </form>
+
+        {{/with}}
+        <hr/>
+
+        <h4>{{_ "Change Password"}}</h4>
+
+        <form id="change_password_form">        
+            <div class="form-group">
+                <label for="oldPassword" class="control-label">{{_ "Old Password"}} *</label>
+                <input type="password" id="oldPassword" placeholder="{{_ 'Old Password'}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="newPassword" class="control-label">{{_ "New Password"}} *</label>
+                <input type="password" id="newPassword" placeholder="{{_ 'New Password'}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="confirmNewPassword" class="control-label">{{_ "Confirm"}}{{_ "New Password"}} *</label>
+                <input type="password" id="confirmNewPassword" placeholder="{{_ 'Confirm'}}{{_ 'New Password'}}" class="form-control">
+            </div>
+            <button id="btnChangePassword" type="submit" class="btn btn-success">{{_ "Submit"}}</button>                
+        </form>
+    </div>
+</template>

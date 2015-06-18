@@ -1,0 +1,42 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+aldeed:collection2
+iron:router
+meteorhacks:subs-manager
+accounts-base
+accounts-password
+mystor:device-detection
+sacha:spin
+mizzao:timesync
+jquery
+momentjs:moment
+lepozepo:accounting
+cfs:standard-packages
+cfs:filesystem
+cfs:ejson-file
+cfs:gridfs
+twbs:bootstrap
+francocatena:status
+accounts-facebook
+accounts-google
+service-configuration
+fortawesome:fontawesome
+ground:db
+aldeed:autoform
+mizzao:autocomplete
+peerlibrary:fs
+spiderable
+gadicohen:phantomjs
+natestrauser:select2
+dburles:collection-helpers
+rajit:bootstrap3-datepicker
+summernote:summernote
+email
+accounts-ui
+reywood:publish-composite
+kevohagan:sweetalert
+tap:i18n
